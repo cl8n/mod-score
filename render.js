@@ -109,8 +109,13 @@ class Page extends React.PureComponent {
     onKudosuInput(e) {
         e.preventDefault();
 
+        let kudosu = parseInt(e.target.value);
+        if (isNaN(kudosu)) {
+            kudosu = 0;
+        }
+
         this.setState({
-            kudosuCount: parseInt(e.target.value),
+            kudosuCount: kudosu,
         })
     }
 
