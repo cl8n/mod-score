@@ -34,10 +34,10 @@ class Page extends React.PureComponent {
         super(props);
 
         this.state = {
-            kudosuCount: props.kudosuCount,
-            mapCounts: props.mapCounts,
-            mode: props.mode,
-            modScores: props.modScores,
+            kudosuCount: 0,
+            mapCounts: Array(months).fill(0),
+            mode: 0,
+            modScores: Array.from(Array(months), _ => modScore(0, 0)),
         };
 
         this.checkStatus = this.checkStatus.bind(this);
@@ -137,3 +137,8 @@ class Page extends React.PureComponent {
         });
     }
 }
+
+ReactDOM.render(
+    e(Page),
+    document.getElementById('app')
+);

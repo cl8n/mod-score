@@ -10,18 +10,6 @@
 
         <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-
         <script src="render.js"></script>
-        <script>
-            ReactDOM.render(
-                e(Page, {
-                    kudosuCount: 0,
-                    mapCounts: Array(months).fill(0),
-                    mode: 0,
-                    modScores: Array.from(Array(months), _ => modScore(0, 0)),
-                }),
-                document.getElementById('app')
-            );
-        </script>
     </body>
 </html>
